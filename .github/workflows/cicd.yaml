@@ -36,6 +36,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Verify Go version
+      run: go version  # Ensure it's using Go 1.23.4
+
+    - name: Ensure dependencies are installed
+      run: go mod tidy 
+      
     - name: Checkout repository
       uses: actions/checkout@v4
 
