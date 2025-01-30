@@ -37,7 +37,7 @@ jobs:
 
     steps:
     - name: Verify Go version
-      run: go version  # Ensure it's using Go 1.23.4
+      run: go version  # Ensure it's using Go 1.23.5
 
     
       
@@ -45,9 +45,9 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Run golangci-lint
-      uses: golangci/golangci-lint-action@v6
+      uses: golangci/golangci-lint-action@v5
       with:
-        version: v1.56.2
+        version: v1.54.2
     
   
   push:
